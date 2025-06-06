@@ -1,0 +1,3 @@
+export const AuthConstants = {
+    secret: "my secret" //trocar pela env depois....
+}

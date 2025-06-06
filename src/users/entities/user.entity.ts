@@ -13,4 +13,10 @@ export class User {
 	status: string;
 	@Column()
 	password: string;
+
+	@Column({
+		type: "text",
+		default: "ROLE_ADMIN"
+	})
+	role?: string;
 }
