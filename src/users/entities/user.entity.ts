@@ -4,11 +4,11 @@ export class User {
 	@PrimaryGeneratedColumn()
 	id: number;
 	@Column()
-	name: string;
+	name?: string;
 	@Column()
 	email: string;
 	@Column()
-	telefone: string;
+	telefone?: string;
 	@Column()
 	status: string;
 	@Column()

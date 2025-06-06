@@ -6,6 +6,7 @@ import { User } from "../entities/user.entity";
 @Injectable()
 export class UsersService {
 	create(createUserDto: CreateUserDto) {
+		console .log(createUserDto)
 		return "This action adds a new user";
 	}
  

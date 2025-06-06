@@ -1,5 +1,5 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
-import { AutorService } from '.././services/autor.service';
+import { AutorService } from '../services/autor.service';
 import { CreateAutorDto } from '../dto/create-autor.dto';
 import { UpdateAutorDto } from '../dto/update-autor.dto';
 import { ValidationPipe } from 'src/utils/validation.pipe';
@@ -14,7 +14,7 @@ export class AutorController {
   }
 
   @Get('find')
-  findAll() {
+  findAll() { 
     return this.autorService.findAll();
   }
 

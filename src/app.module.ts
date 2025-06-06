@@ -8,6 +8,8 @@ import { CategoriaModule } from './categoria/categoria.module';
 import { LivrosModule } from './livros/livros.module';
 import { EmprestimosModule } from './emprestimos/emprestimos.module';
 import { AuthController } from './auth/controllers/auth.controller';
+import { AutorController } from "./autor/controllers/autor.controller";
+import { UsersController } from "./users/controllers/users.controller";
 
 @Module({
 	imports: [
@@ -23,7 +25,7 @@ import { AuthController } from './auth/controllers/auth.controller';
 		LivrosModule,
 		EmprestimosModule,
 	],
-	controllers: [AppController, AuthController],
+	controllers: [AppController],
 	providers: [AppService],
 })
 export class AppModule {}
