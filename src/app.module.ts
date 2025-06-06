@@ -7,12 +7,13 @@ import { AutorModule } from './autor/autor.module';
 import { CategoriaModule } from './categoria/categoria.module';
 import { LivrosModule } from './livros/livros.module';
 import { EmprestimosModule } from './emprestimos/emprestimos.module';
+import { AuthController } from './auth/auth.controller';
 
 @Module({
 	imports: [
 		TypeOrmModule.forRoot({
 			type: "sqlite",
-			database: "sqlitedb",
+			database: "src/database/db.sqlite",
 			entities: [__dirname + "/**/*.entity{.ts,.js}"],
 			synchronize: true,
 		}),
@@ -22,7 +23,7 @@ import { EmprestimosModule } from './emprestimos/emprestimos.module';
 		LivrosModule,
 		EmprestimosModule,
 	],
-	controllers: [AppController],
+	controllers: [AppController, AuthController],
 	providers: [AppService],
 })
 export class AppModule {}

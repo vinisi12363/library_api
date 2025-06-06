@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
-import { AutorService } from './autor.service';
-import { AutorController } from './autor.controller';
+import { AutorService } from './services/autor.service';
+import { AutorController } from './controllers/autor.controller';
 import { Autor } from './entities/autor.entity';
 import { TypeOrmModule } from '@nestjs/typeorm';
 

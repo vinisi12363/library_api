@@ -8,7 +8,7 @@ import { User } from './src/users/entities/user.entity';
 
 export const AppDataSource = new DataSource({
   type: 'sqlite',
-  database: 'db.sqlite',
+  database: 'src/database/db.sqlite',
   synchronize: false,
   entities: [Livro, Autor, Categoria, Emprestimo, User],
   migrations: ['src/migrations/*.ts'],

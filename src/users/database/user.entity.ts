@@ -28,16 +28,22 @@ export class UserEntity {
     @Column()
 	password: string;
 
+    // @Column({
+    //    type:'text',
+    //    enum:UserRole,
+    //    default:[UserRole.ADMIN]
+    // })
+    // role: UserRole[]
+
     @Column({
-       type:'enum',
-       enum:UserRole,
-       default:[UserRole.ADMIN]
+    type: 'text',
+    default: 'USER',
     })
-    roles: UserRole[]
+    roles: string;
 
     @Column({
         type:'text',
-        default: [UserStatus.ativo]
+        default:'disponivel'
     })
     status: UserStatus
 }
