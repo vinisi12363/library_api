@@ -18,7 +18,6 @@ export class UserEntity {
     @Column()
 	nome?: string;
 	
-  
     @Column()
    
 	email: string;
@@ -30,15 +29,14 @@ export class UserEntity {
 	password: string;
 
     @Column({
-       type:'set',
+       type:'enum',
        enum:UserRole,
        default:[UserRole.ADMIN]
     })
     roles: UserRole[]
 
     @Column({
-        type:'set',
-        enum: UserStatus,
+        type:'text',
         default: [UserStatus.ativo]
     })
     status: UserStatus

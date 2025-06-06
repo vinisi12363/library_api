@@ -1,6 +1,8 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Livro } from "src/livros/entities/livro.entity";
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn, Unique } from "typeorm";
 
 @Entity()
+@Unique(['nome'])
 export class Categoria {
     @PrimaryGeneratedColumn()
     id: number;
@@ -10,4 +12,7 @@ export class Categoria {
 
     @Column()
     descricao?: string;
+
+    @OneToMany(()=>Livro, livro=> livro.categoria)
+    livros: Livro[];
 }
